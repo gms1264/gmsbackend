@@ -7,7 +7,7 @@ const subjectCreate = async (req, res) => {
         const subjects = req.body.subjects.map((subject) => ({
             subName: subject.subName,
             subCode: subject.subCode,
-            sessions: subject.sessions,
+            // sessions: subject.sessions,
         }));
 
         const existingSubjectBySubCode = await Subject.findOne({
