@@ -27,6 +27,19 @@ const studentSchema = new mongoose.Schema({
         type: String,
         default: "Student"
     },
+    dob: {
+        type: Date,
+    },
+    gender:{
+        type: String,
+        required: true
+    },
+    phone:{
+        type: Number,
+    },
+    address:{
+        type: String,
+    },
     examResult: [
         {
             subName: {
