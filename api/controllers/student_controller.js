@@ -20,7 +20,8 @@ const studentRegister = async (req, res) => {
             const student = new Student({
                 ...req.body,
                 school: req.body.adminID,
-                password: hashedPass
+                password: hashedPass,
+                dob: new Date(req.body.dob),      // Ensure the date is stored as Date
             });
 
             let result = await student.save();
